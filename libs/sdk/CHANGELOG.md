@@ -1,5 +1,19 @@
 # @langchain/langgraph-sdk
 
+## 1.12.9
+
+### Patch Changes
+
+- [#3123](https://github.com/langchain-ai/langgraphjs/pull/3123) [`b5f96bd`](https://github.com/langchain-ai/langgraphjs/commit/b5f96bdac43542a053a80cb4b056d710cf46393c) Thanks [@eliornl](https://github.com/eliornl)! - A run abandoned by `clear()` or `stop()` no longer runs `onSuccess`, so a thread switch during a reconnect backoff no longer loads the previous thread's history.
+
+- [#3123](https://github.com/langchain-ai/langgraphjs/pull/3123) [`b5f96bd`](https://github.com/langchain-ai/langgraphjs/commit/b5f96bdac43542a053a80cb4b056d710cf46393c) Thanks [@eliornl](https://github.com/eliornl)! - After a reload, a subagent delegated by an older turn is no longer shown with the tool results of a newer turn.
+
+- [#3123](https://github.com/langchain-ai/langgraphjs/pull/3123) [`b5f96bd`](https://github.com/langchain-ai/langgraphjs/commit/b5f96bdac43542a053a80cb4b056d710cf46393c) Thanks [@eliornl](https://github.com/eliornl)! - After a reload, a subagent that is still running or waiting on an approval no longer shows the state of a regular tool called before it in the same message.
+
+- [#3123](https://github.com/langchain-ai/langgraphjs/pull/3123) [`b5f96bd`](https://github.com/langchain-ai/langgraphjs/commit/b5f96bdac43542a053a80cb4b056d710cf46393c) Thanks [@eliornl](https://github.com/eliornl)! - With `streamSubgraphs`, values from a subgraph that is not a subagent no longer replace the root state while the subgraph runs. Its results show once its node returns.
+
+- [#3123](https://github.com/langchain-ai/langgraphjs/pull/3123) [`b5f96bd`](https://github.com/langchain-ai/langgraphjs/commit/b5f96bdac43542a053a80cb4b056d710cf46393c) Thanks [@eliornl](https://github.com/eliornl)! - A numeric `throttle` notifies at most once per interval while values keep changing, as documented, instead of waiting until they stop.
+
 ## 1.12.8
 
 ### Patch Changes
